@@ -26,25 +26,25 @@ Dado que Lynis es flexible, se utiliza para varios propósitos distintos. Los ca
 
 Lynis es utilizado por perfiles muy distintos dentro del mundo de la seguridad informática:
 
-### 🛠️ Desarrolladores
+###  Desarrolladores
 
 - Prueba la seguridad de tus imágenes Docker antes de desplegarlas.
 - Mejora el hardening de tus aplicaciones web en producción.
 - Integra Lynis en tu pipeline de CI/CD para auditorías continuas.
 
-### 🖥️ Administradores de sistemas
+###  Administradores de sistemas
 
 - Ejecuta escaneos diarios de salud para descubrir nuevas debilidades.
 - Mantén un historial de cambios en la postura de seguridad del sistema.
 - Recibe alertas sobre configuraciones que se han vuelto inseguras con el tiempo.
 
-### 📋 Auditores de TI
+###  Auditores de TI
 
 - Demuestra a colegas o clientes qué puede hacerse para mejorar la seguridad.
 - Genera reportes detallados para auditorías internas y externas.
 - Valida el cumplimiento de políticas de seguridad corporativas.
 
-### 🔍 Pentesters
+###  Pentesters
 
 - Descubre debilidades de seguridad en sistemas de clientes.
 - Identifica vectores de ataque que podrían resultar en compromiso del sistema.
