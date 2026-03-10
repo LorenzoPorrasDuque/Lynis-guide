@@ -29,7 +29,7 @@ Repositorio dedicado a una guía completa de instalación, uso y mejores prácti
 
 ### Características principales
 
-- **Sin dependencias externas** – Lynis utiliza únicamente las herramientas disponibles en el sistema.
+- **Sin dependencias externas** – Lynis utiliza únicamente las herramientas disponibles en el sistema
 - **Escaneo modular y oportunista** – Solo evalúa los componentes que encuentra instalados.
 - **Multiplataforma** – Compatible con Linux, macOS, BSD, Solaris y muchos más.
 - **Reportes detallados** – Genera reportes con sugerencias concretas de mejora.
