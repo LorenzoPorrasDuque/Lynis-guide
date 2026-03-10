@@ -60,7 +60,7 @@ Las siguientes distribuciones de Linux han sido verificadas específicamente con
 | **Memoria RAM** | Mínima – Lynis es extremadamente ligero |
 | **Conexión a internet** | No requerida para el escaneo básico |
 
-> **Nota:** Lynis funciona mejor con privilegios de root o sudo, ya que muchos archivos de configuración del sistema solo son legibles por root.
+> **Nota:** Lynis funciona mejor con privilegios de root o sudo.
 
 ---
 
