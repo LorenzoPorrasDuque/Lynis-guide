@@ -1,53 +1,69 @@
-# OPENVAS
-Repositorio dedicado a una instalacion basica y uso adecuado de OPENVASS 
+# Lynis – Guía de Auditoría de Seguridad
+
 ```mermaid
 graph LR
-A[User] -- WEB --> B((OPENVASS))
-B --> D{Metasploitable: 2}
-
+    A[Usuario / Auditor] -- ejecuta --> B((Lynis))
+    B --> C{Sistema objetivo}
+    C --> D[Reporte de seguridad]
 ```
-# Instalacion 
-OpenVas ofrece multiples productos relacionados el escaneo de vulnerabilidades, pero en este caso solo suaremos la version free.
 
-Esta misma puede ser descargada en el siguiente enlace https://www.greenbone.net/en/openvas-free/
+Repositorio dedicado a una guía completa de instalación, uso y mejores prácticas de **Lynis**, la herramienta open-source de auditoría de seguridad para sistemas UNIX.
 
-Asi mismo en la pagina se puede encontrar el turorial de su instalacion
+---
 
-<img width="615" height="424" alt="image" src="https://github.com/user-attachments/assets/5b6f47cd-5832-4b28-af4a-3d605951ef18" />
+## Tabla de contenidos
 
-Se accede al Wizard
+| Sección | Descripción |
+|---|---|
+| [Introducción](introduction.md) | Objetivos del proyecto, audiencia y casos de uso |
+| [Sistemas operativos soportados](supported-os.md) | Plataformas compatibles con Lynis |
+| [Cómo funciona](how-it-works.md) | Metodología de escaneo y pasos de auditoría |
+| [Instalación](installation.md) | Cómo instalar Lynis en distintos sistemas |
+| [Uso](usage.md) | Cómo ejecutar Lynis y entender sus resultados |
 
-<img width="619" height="409" alt="image" src="https://github.com/user-attachments/assets/9aad544d-97d5-40d6-b37c-af0e7de30eb3" />
+---
 
-Se crea el ussuario para la interfaz grafica y ya dependiendo de si se tiene o no una key de los otros productos se deja o se inserta esta misma key.
+## ¿Qué es Lynis?
 
-Ya finalmente de la instalacion podremos observarn la ip del dispositivo donde estara nuestra web interface
+**Lynis** es una herramienta de auditoría de seguridad open-source diseñada para sistemas UNIX y Linux. Realiza escaneos exhaustivos del sistema para detectar vulnerabilidades, configuraciones incorrectas y oportunidades de hardening.
 
-<img width="362" height="171" alt="image" src="https://github.com/user-attachments/assets/8f1c7cbd-d647-4700-a5ba-312082eee479" />
+### Características principales
 
-# Uso
+- **Sin dependencias externas** – Lynis utiliza únicamente las herramientas disponibles en el sistema.
+- **Escaneo modular y oportunista** – Solo evalúa los componentes que encuentra instalados.
+- **Multiplataforma** – Compatible con Linux, macOS, BSD, Solaris y muchos más.
+- **Reportes detallados** – Genera reportes con sugerencias concretas de mejora.
 
-Ya con la inferza instalada, iniciamos sesion con el usuario antes creado y tendremos la siguiente interfaz
+### Casos de uso típicos
 
-<img width="2557" height="1007" alt="image" src="https://github.com/user-attachments/assets/48a2bfb4-36f7-4af7-8089-a4cf8eff991f" />
+- Auditoría de seguridad
+- Pruebas de cumplimiento (PCI, HIPAA, SOX)
+- Pruebas de penetración
+- Detección de vulnerabilidades
+- Hardening de sistemas
 
-## Escaneo basico
-Openvas nos da la capacidad de hacer escaneos a multiples ips o host individuales
+---
 
-Para ello iremos a la ventana de Configuration -> Targets, donde podremos anadir nuestros targets.
+## Inicio rápido
 
-En este caso estamos usando la maquina de Metaesploitable2 que se puede encontrar en https://www.vulnhub.com/entry/metasploitable-2,29/
+```bash
+# Clonar el repositorio oficial
+git clone https://github.com/CISOfy/lynis
 
-Una configuracion basica es la siguiente
+# Entrar al directorio
+cd lynis
 
-<img width="1023" height="1190" alt="image" src="https://github.com/user-attachments/assets/081ec29e-3222-4920-b212-af1d1a667b46" />
+# Ejecutar una auditoría del sistema
+sudo ./lynis audit system
+```
 
-Asi mismo hay configuraciones adicionales tales como
+Para instrucciones detalladas, consulta la sección de [Instalación](installation.md) y [Uso](usage.md).
 
-<img width="1026" height="624" alt="image" src="https://github.com/user-attachments/assets/06790eec-c749-4fe0-8ba6-dc7b18cbe0ae" />
+---
 
-Esto con el fin si somos administradores poder ir a mas profunidad, en este caso con el proposito de la herramienta, nos limitaremos a solo hacer analisis desde la ip objetivo.
+## Recursos oficiales
 
-# Resultados
+- Sitio web: https://cisofy.com/lynis/
+- Repositorio GitHub: https://github.com/CISOfy/lynis
+- Documentación: https://cisofy.com/documentation/lynis/
 
-# Metodologia 
