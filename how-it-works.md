@@ -64,7 +64,7 @@ Se realizan verificaciones fundamentales como:
 
 Lynis identifica:
 - El sistema operativo y su versión
-- El gestor de paquetes disponible (apt, yum, brew, pkg, etc.)
+- El gestor de paquetes disponible (apt, yum, etc)
 - Las herramientas de línea de comandos presentes en el sistema
 
 ### 4. Búsqueda de componentes de software
