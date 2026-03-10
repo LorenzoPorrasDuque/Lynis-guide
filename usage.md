@@ -22,13 +22,6 @@ sudo lynis audit system
 
 Este comando ejecuta todos los módulos de prueba disponibles y genera un reporte completo.
 
-### Auditoría sin interacción (modo no interactivo)
-
-Útil para scripts automáticos o pipelines CI/CD:
-
-```bash
-sudo lynis audit system --non-interactive
-```
 
 ### Auditoría en modo rápido (omite pausas)
 
@@ -148,87 +141,7 @@ Al finalizar el escaneo, Lynis muestra un resumen:
 
 ---
 
-## Revisando el reporte
 
-### Archivo de log (`lynis.log`)
-
-Contiene el detalle completo del escaneo, incluyendo los comandos ejecutados y sus resultados:
-
-```bash
-# Ver el log completo
-sudo cat /var/log/lynis.log
-
-# Filtrar solo las advertencias
-sudo grep "Warning" /var/log/lynis.log
-
-# Filtrar sugerencias
-sudo grep "Suggestion" /var/log/lynis.log
-```
-
-### Archivo de reporte (`lynis-report.dat`)
-
-Contiene datos estructurados del escaneo, útiles para integración con otras herramientas:
-
-```bash
-# Ver el reporte
-sudo cat /var/log/lynis-report.dat
-
-# Ver solo advertencias del reporte
-sudo grep "^warning" /var/log/lynis-report.dat
-
-# Ver el índice de hardening
-sudo grep "hardening_index" /var/log/lynis-report.dat
-```
-
----
-
-## Automatización con cron
-
-Para ejecutar Lynis automáticamente de forma periódica:
-
-```bash
-# Editar el crontab de root
-sudo crontab -e
-```
-
-Agregar una línea para ejecutar el escaneo diariamente a las 3:00 AM:
-
-```cron
-0 3 * * * /usr/bin/lynis audit system --cronjob --logfile /var/log/lynis-$(date +\%Y\%m\%d).log
-```
-
-> **Nota:** En crontab, el carácter `%` debe escaparse como `\%`. El ejemplo anterior es correcto para su uso directo en un archivo crontab.
-```
-
----
-
-## Perfiles de configuración
-
-Lynis permite usar perfiles personalizados para adaptar el comportamiento del escaneo:
-
-```bash
-# Usar un perfil personalizado
-sudo lynis audit system --profile /etc/lynis/custom.prf
-```
-
-Ejemplo de archivo de perfil (`custom.prf`):
-
-```ini
-# Definir el nombre del auditor
-auditor=Equipo de Seguridad
-
-# Omitir tests específicos
-skip-test=BOOT-5122
-skip-test=FILE-6310
-
-# Definir la ruta del reporte
-report-file=/var/log/lynis-custom-report.dat
-
-# Activar modo verbose
-verbose=yes
-```
-
----
 
 ## Consejos de uso
 
